@@ -17,10 +17,10 @@ pipeline {
                     ls -ltr
                     echo "Build step started"
 		    commit=$(git rev-parse --short HEAD)
-		    docker build -t gokhangunduz1/canarydemo:$commit -f Dockerfile .	    
-                    docker tag gokhangunduz1/canarydemo:${commit} gokhangunduz1/canarydemo:latest
-		    docker push gokhangunduz1/canarydemo:${commit}
-		    docker push gokhangunduz1/canarydemo:latest
+		    docker build -t gokhangunduz1/phpapp:$commit -f Dockerfile .	    
+                    docker tag gokhangunduz1/phpapp:${commit} gokhangunduz1/phpapp:latest
+		    docker push gokhangunduz1/phpapp:${commit}
+		    docker push gokhangunduz1/phpapp:latest
                     echo "Build step completed successfully. Next step is Test ...."
                 '''
             }
