@@ -1,8 +1,9 @@
-FROM alpine:latest
+FROM php:8.2-apache
 
-RUN echo "Test app"
+WORKDIR /var/www/html
 
-RUN pwd
-RUN ls -ltra
+COPY papp/ .
 
-CMD ["sleep", "infinity"]
+ENV APP_VERSION=blue
+
+EXPOSE 80
