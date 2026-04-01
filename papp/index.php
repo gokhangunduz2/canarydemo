@@ -36,7 +36,7 @@ fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=$
 
   const temp = closest.airTemperature.noaa;
   const roundedTemp = Math.round(temp);
-  let element = document.getElementById("tempFont").text();
+  let element = document.getElementById("tempFont");
   if(roundedTemp <= 16) {
      element.style.color = "#6699CC"
   } else {
