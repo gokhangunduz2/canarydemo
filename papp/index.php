@@ -16,6 +16,6 @@ fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=$
   }
 }).then((response) => response.json()).then((jsonData) => {
   // Do something with response data.
-  alert(response)
+  console.log(jsonData)
 });
 </script>
