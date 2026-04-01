@@ -2,6 +2,8 @@
 
 body {background-color:#171717; color:#fff; width:100%; height:100%;}
 
+* {margin:0; padding:0;}
+
 </style>
 
 
@@ -49,6 +51,6 @@ fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=$
 });
 </script>
 
-<div stlye="display:flex; justify-content:center; align-items:center; width:100%; height:100%;">
+<div style="display:flex; justify-content:center; align-items:center; width:100%; height:100%;">
 <span style="font-size:128px; font-family: sans-serif" id="tempFont"></span>
 </div>
