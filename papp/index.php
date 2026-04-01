@@ -9,9 +9,9 @@ echo "VERSION: " . getenv("APP_VERSION");
 
 <script>
 
-const lat = 58.7984;
-const lng = 17.8081;
-const params = 'windSpeed';
+const lat = 41.00958937064345;
+const lng = 28.9776264472511;
+const params = 'airTemperature';
 
 fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`, {
   headers: {
