@@ -1,10 +1,8 @@
-<?php
+<style>
 
-echo "<style>body {background-color:black; color:white;} </style>";
+body {background-color:#171717; color:#fff; width:100%; height:100%;}
 
-echo "VERSION: " . getenv("APP_VERSION");
-
-?>
+</style>
 
 
 <script>
@@ -37,8 +35,20 @@ fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=$
   });
 
   const temp = closest.airTemperature.noaa;
+  const roundedTemp = Math.round(temp);
+  let element = document.getElementById("tempFont").text();
+  if(roundedTemp <= 16) {
+     element.style.color = "#6699CC"
+  } else {
+     element.style.color = "#ff6161"
+  }
 
+  element.innerText = roundedTemp + "°C";
   console.log("Şu anki sıcaklık:", temp);
 
 });
 </script>
+
+<div stlye="display:flex; justify-content:center; align-items:center; width:100%; height:100%;">
+<span style="font-size:128px; font-family: sans-serif" id="tempFont"></span>
+</div>
